@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/blue_700">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="صفحه اصلی"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:fillViewport="true">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/map">
+
+
+                <EditText
+                    android:id="@+id/txt_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="32dp"
+                    android:background="@drawable/edittext_shape"
+                    android:hint="نام خط"
+                    android:padding="8dp"
+                    android:textColorHint="@color/grey_60"
+                    android:textSize="15dp" />
+
+
+                <!--<EditText-->
+                <!--android:id="@+id/txt_number"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="48dp"-->
+                <!--android:layout_below="@+id/txt_name"-->
+                <!--android:layout_marginLeft="32dp"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:layout_marginRight="32dp"-->
+                <!--android:background="@drawable/edittext_shape"-->
+                <!--android:hint="شماره خط"-->
+                <!--android:padding="8dp"-->
+                <!--android:textColorHint="@color/grey_60"-->
+                <!--android:textSize="15dp" />-->
+
+
+                <EditText
+                    android:id="@+id/txt_start"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_below="@+id/txt_name"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="32dp"
+                    android:background="@drawable/edittext_shape"
+                    android:hint="شروع خط"
+                    android:padding="8dp"
+                    android:textColorHint="@color/grey_60"
+                    android:textSize="15dp" />
+
+
+                <EditText
+                    android:id="@+id/txt_end"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_below="@+id/txt_start"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="32dp"
+                    android:background="@drawable/edittext_shape"
+                    android:hint="پایان خط"
+                    android:padding="8dp"
+                    android:textColorHint="@color/grey_60"
+                    android:textSize="15dp" />
+
+                <Button
+                    android:id="@+id/btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_below="@+id/txt_end"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="32dp"
+                    android:background="@color/blue_700"
+                    android:text="شروع خط!" />
+
+                <Button
+                    android:id="@+id/btn3"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_below="@+id/btn"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="32dp"
+                    android:background="@color/blue_700"
+                    android:text="توقف"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/stationname"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_below="@+id/btn3"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="32dp"
+                    android:background="@drawable/edittext_shape"
+                    android:hint="نام ایستگاه"
+                    android:padding="8dp"
+                    android:textColorHint="@color/grey_60"
+                    android:textSize="15dp"
+                    android:visibility="gone" />
+
+
+                <Button
+                    android:id="@+id/btn2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_below="@+id/stationname"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="32dp"
+                    android:background="@color/blue_700"
+                    android:text=" ثبت ایستگاه"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+
